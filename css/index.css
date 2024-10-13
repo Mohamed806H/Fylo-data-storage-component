@@ -1,0 +1,77 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+:root {
+  --font-base: "Raleway", sans-serif;
+  --clr-PaleBlue: hsl(243, 100%, 93%);
+  --clr-GrayishBlue: hsl(229, 7%, 55%);
+  --clr-DarkBlue: hsl(228, 56%, 26%);
+  --clr-VeryDarkBlue: hsl(229, 57%, 11%);
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html:focus-within {
+  scroll-behavior: smooth;
+}
+body {
+  overflow-x: hidden;
+  position: relative;
+  text-rendering: optimizeSpeed;
+  font-family: var(--font-base);
+  background: no-repeat bottom left var(--clr-VeryDarkBlue);
+  background-image: url(../images/bg-desktop.png);
+  background-size: contain;
+  font-size: 0.875rem;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+img,
+picture,
+svg {
+  max-width: 100%;
+  display: block;
+}
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+.same-icons-style {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 0.5rem;
+  background-color: var(--clr-VeryDarkBlue);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 1rem;
+}
+.flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+@media (max-width: 600px) {
+  body {
+    background: no-repeat;
+    background-size: cover;
+    background-image: url(../images/bg-mobile.png);
+  }
+}
